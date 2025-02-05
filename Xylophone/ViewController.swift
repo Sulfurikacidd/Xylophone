@@ -18,9 +18,12 @@ class ViewController: UIViewController {
     }
 
     @IBAction func keyPressed(_ sender: UIButton) {
+        
+        //Call the func and pass the name of the sound to it (which is equal to the btn title).
         playSound(btnName: sender.currentTitle!)
     }
     
+    //Create a func that takes the name of sound (btn title).
     func playSound(btnName: String) {
         let url = Bundle.main.url(forResource: btnName, withExtension: "wav")
         player = AVPlayer(url: url!)
